@@ -33,8 +33,8 @@ namespace QuanLyNhanSu.ThongKe
         {
             try
             {
-                DateTime ngaydau = Convert.ToDateTime(Convert.ToInt32(cbThang.Text) + "/" + "01/" + Convert.ToInt32(cbNam.Text) + " ");
-                DateTime ngaycuoi = Convert.ToDateTime(Convert.ToInt32(cbThang.Text) + "/" + "29/" + Convert.ToInt32(cbNam.Text) + " ");
+                DateTime ngaydau = Convert.ToDateTime( "01/" + Convert.ToInt32(cbThang.Text) + "/" + Convert.ToInt32(cbNam.Text) + " ");
+                DateTime ngaycuoi = Convert.ToDateTime("29/" + Convert.ToInt32(cbThang.Text) + "/" + Convert.ToInt32(cbNam.Text) + " ");
                 dt.Clear();
                 dt = tkcl.tkSoNgayDiLamCuaNhanVien(ngaydau, ngaycuoi, 1);
                 dataGridView1.DataSource = dt;

@@ -19,6 +19,7 @@ namespace QuanLyNhanSu.ThongKe
             InitializeComponent();
         }
         tkCauLenh tkcl = new tkCauLenh();
+        CauLenh cl = new CauLenh();
         DataTable dt = new DataTable();
         private void btXem_Click(object sender, EventArgs e)
         {
@@ -27,7 +28,7 @@ namespace QuanLyNhanSu.ThongKe
                 DateTime ngaydau = Convert.ToDateTime("01/" + Convert.ToInt32(cbThang.Text) + "/" + Convert.ToInt32(cbNam.Text) + " ");
                 DateTime ngaycuoi = Convert.ToDateTime("29/" + Convert.ToInt32(cbThang.Text) + "/" + Convert.ToInt32(cbNam.Text) + " ");
                 dt.Clear();
-                dt = tkcl.tkccXemTheoTenVaPhongBan("abc", txtTen.Text, ngaydau, ngaycuoi, 0);
+                dt = tkcl.tkccXemTheoTenVaPhongBan("abc", cbPhong.SelectedValue.ToString(), ngaydau, ngaycuoi, 0);
                 dataGridView1.DataSource = dt;
             }
             catch (Exception)
@@ -37,7 +38,10 @@ namespace QuanLyNhanSu.ThongKe
         }
         private void load()
         {
-            btXem.Enabled = false;
+             
+            cbPhong.DataSource= cl.LayPhongBan();
+            cbPhong.DisplayMember = "TenPB";
+            cbPhong.ValueMember = "MaPB";
         }
         private void tkXemccTheoPhong_Load(object sender, EventArgs e)
         {
@@ -51,7 +55,7 @@ namespace QuanLyNhanSu.ThongKe
 
         private void txtTen_MouseHover(object sender, EventArgs e)
         {
-            txtTen.Text = "Phòng ";
+
         }
     }
 }

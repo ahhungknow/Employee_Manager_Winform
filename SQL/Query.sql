@@ -966,8 +966,8 @@ as
 go
 
 Create proc [dbo].[tkccXemTheoTenVaPhongBan]
-@tennv nvarchar(50),
-@tenpb nvarchar(20),
+@manv nvarchar(50),
+@mapb nvarchar(20),
 @ngaydau date,
 @ngaycuoi date,
 @khoa int
@@ -1016,3 +1016,20 @@ begin
 	where (TenNV like '%'+@tukhoa+'%' or SoCM like '%'+@tukhoa+'%' or DienThoai like '%'+@tukhoa+'%' or TrinhDoHV like '%'+@tukhoa+'%' or DiaChi like '%'+@tukhoa+'%' 
 		or Email like '%'+@tukhoa+'%' or TTHonNhan like '%'+@tukhoa+'%' or TenCv like '%'+@tukhoa+'%' or TenPB like '%'+@tukhoa+'%')
 end
+
+go
+
+Create proc [dbo].[LayPhongBan]
+as
+	begin
+		select * from PhongBan
+	end
+
+go
+
+Create proc [dbo].[TatCaNhanVien]
+as
+	begin
+		select * from NhanVien
+	end
+

@@ -31,6 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ng = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btXem = new System.Windows.Forms.Button();
             this.cbNam = new System.Windows.Forms.ComboBox();
             this.cbThang = new System.Windows.Forms.ComboBox();
@@ -38,11 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtTen = new System.Windows.Forms.TextBox();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbTen = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,12 +78,42 @@
             this.dataGridView1.Size = new System.Drawing.Size(610, 294);
             this.dataGridView1.TabIndex = 5;
             // 
+            // MaNV
+            // 
+            this.MaNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaNV.DataPropertyName = "MaNhanVien";
+            this.MaNV.HeaderText = "Mã Nhân Viên";
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
+            // 
+            // TenNV
+            // 
+            this.TenNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenNV.DataPropertyName = "TenNV";
+            this.TenNV.HeaderText = "Tên Nhân Viên";
+            this.TenNV.Name = "TenNV";
+            this.TenNV.ReadOnly = true;
+            // 
+            // Tt
+            // 
+            this.Tt.DataPropertyName = "TinhTrang";
+            this.Tt.HeaderText = "Tình Trạng";
+            this.Tt.Name = "Tt";
+            this.Tt.ReadOnly = true;
+            // 
+            // Ng
+            // 
+            this.Ng.DataPropertyName = "Ngay";
+            this.Ng.HeaderText = "Ngày";
+            this.Ng.Name = "Ng";
+            this.Ng.ReadOnly = true;
+            // 
             // btXem
             // 
             this.btXem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXem.Location = new System.Drawing.Point(379, 85);
             this.btXem.Name = "btXem";
-            this.btXem.Size = new System.Drawing.Size(169, 27);
+            this.btXem.Size = new System.Drawing.Size(164, 33);
             this.btXem.TabIndex = 11;
             this.btXem.Text = "Xem";
             this.btXem.UseVisualStyleBackColor = true;
@@ -166,51 +196,21 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Tên Nhân Viên";
             // 
-            // txtTen
+            // cbTen
             // 
-            this.txtTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTen.Location = new System.Drawing.Point(149, 106);
-            this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(198, 26);
-            this.txtTen.TabIndex = 12;
-            this.txtTen.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // MaNV
-            // 
-            this.MaNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaNV.DataPropertyName = "MaNhanVien";
-            this.MaNV.HeaderText = "Mã Nhân Viên";
-            this.MaNV.Name = "MaNV";
-            this.MaNV.ReadOnly = true;
-            // 
-            // TenNV
-            // 
-            this.TenNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenNV.DataPropertyName = "TenNV";
-            this.TenNV.HeaderText = "Tên Nhân Viên";
-            this.TenNV.Name = "TenNV";
-            this.TenNV.ReadOnly = true;
-            // 
-            // Tt
-            // 
-            this.Tt.DataPropertyName = "TinhTrang";
-            this.Tt.HeaderText = "Tình Trạng";
-            this.Tt.Name = "Tt";
-            this.Tt.ReadOnly = true;
-            // 
-            // Ng
-            // 
-            this.Ng.DataPropertyName = "Ngay";
-            this.Ng.HeaderText = "Ngày";
-            this.Ng.Name = "Ng";
-            this.Ng.ReadOnly = true;
+            this.cbTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTen.FormattingEnabled = true;
+            this.cbTen.Location = new System.Drawing.Point(161, 106);
+            this.cbTen.Name = "cbTen";
+            this.cbTen.Size = new System.Drawing.Size(155, 27);
+            this.cbTen.TabIndex = 12;
             // 
             // tkXemccTheoTen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Controls.Add(this.txtTen);
+            this.Controls.Add(this.cbTen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btXem);
             this.Controls.Add(this.cbNam);
@@ -238,10 +238,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ng;
+        private System.Windows.Forms.ComboBox cbTen;
     }
 }
