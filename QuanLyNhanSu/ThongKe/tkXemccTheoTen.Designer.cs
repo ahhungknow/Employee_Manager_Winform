@@ -209,11 +209,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
+
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-=======
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
->>>>>>> bba52fc90adede95c9023ef011e526fb8c0390f9
+
             this.Controls.Add(this.cbTen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btXem);
