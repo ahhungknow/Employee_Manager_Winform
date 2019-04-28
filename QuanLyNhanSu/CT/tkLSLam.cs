@@ -77,8 +77,7 @@ namespace QuanLyNhanSu.CT
             }
             catch (Exception)
             {
-                MessageBox.Show("Lỗi hoặc không tồn tại tên nhân viên vừa nhập"); 
-               
+                MessageBox.Show("Lỗi hoặc không tồn tại tên nhân viên vừa nhập");             
             }
             
         }

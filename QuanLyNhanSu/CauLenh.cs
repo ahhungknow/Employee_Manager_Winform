@@ -77,6 +77,20 @@ namespace QuanLyNhanSu
             dr = cm.ExecuteReader();
             return dr;
         }
+
+        public DataTable TatCaNhanVien()
+        {
+            if (con.State == ConnectionState.Open)
+                con.Close();
+            con.Open();
+
+            SqlCommand cm = new SqlCommand("TatCaNhanVien", con);
+            cm.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(dt);
+            return dt;
+        }
+
         public DataTable LayTenNhanVien1(string manhanvien)
         {
             if (con.State == ConnectionState.Open)
@@ -845,6 +859,30 @@ namespace QuanLyNhanSu
             SqlCommand cm = new SqlCommand("LayChucVu", con);
             cm.CommandType = CommandType.StoredProcedure;
             cm.Parameters.AddWithValue("@ma", ma);
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable LayPhongBan(string ma = null)
+        {
+            if (con.State == ConnectionState.Open)
+                con.Close();
+            con.Open();
+            SqlCommand cm = new SqlCommand("LayPhongBan", con);
+            cm.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable TatCaChucVu()
+        {
+            if (con.State == ConnectionState.Open)
+                con.Close();
+            con.Open();
+            SqlCommand cm = new SqlCommand("TatCaChucVu", con);
+            cm.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(cm);
             da.Fill(dt);
             return dt;

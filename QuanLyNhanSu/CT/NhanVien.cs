@@ -11,6 +11,8 @@ namespace QuanLyNhanSu.CT
     {
         private CauLenh cl = new CauLenh();
         private DataTable dt = new DataTable();
+        DataTable dtChuc = new DataTable();
+        DataTable dtPhong = new DataTable();
         private SqlDataReader dr;
         private string manv = null, macc = null, tenchucvu = null, tenphongban = null, mhd = null;
         private DateTime ngay, n1, n2;
@@ -37,6 +39,20 @@ namespace QuanLyNhanSu.CT
 
         private void load()
         {
+            CauLenh clcb1 = new CauLenh();
+            CauLenh clcb2 = new CauLenh();
+            dtChuc.Clear();
+            dtChuc= clcb1.TatCaChucVu();
+            cbChuc.DataSource = dtChuc;
+            cbChuc.DisplayMember = "TenCv";
+            cbChuc.ValueMember = "MaCV";
+
+            dtPhong.Clear();
+            dtPhong = clcb2.LayPhongBan();
+            cbPhong.DataSource = dtPhong;
+            cbPhong.DisplayMember = "TenPB";
+            cbPhong.ValueMember = "MaPB";
+
             dt.Clear();
             dt = cl.LayThongTinNV1("NV");
             dataGridView1.DataSource = dt;
@@ -90,7 +106,7 @@ namespace QuanLyNhanSu.CT
         private string LayMaCv(string tencv)
         {
             string MaCV1 = null;
-            dr = cl.layMaCVTuTenCV(txtChuc.Text);
+            dr = cl.layMaCVTuTenCV(cbChuc.Text);
             while (dr.Read())
             {
                 MaCV1 = dr.GetString(0);
@@ -101,7 +117,7 @@ namespace QuanLyNhanSu.CT
         private string LayMaPB(string tencv)
         {
             string MaPB1 = null;
-            dr = cl.layMaPBTuTenPB(txtPhong.Text);
+            dr = cl.layMaPBTuTenPB(cbPhong.Text);
             while (dr.Read())
             {
                 MaPB1 = dr.GetString(0);
@@ -161,9 +177,9 @@ namespace QuanLyNhanSu.CT
                 txtEmail.Text = dr.GetString(8);
                 txtHonNhan.Text = dr.GetString(9);
                 pathHinh = dr.GetString(10);
-                txtChuc.Text = dr.GetString(11);
+                cbChuc.Text = dr.GetString(11);
                 tenchucvu = dr.GetString(11);
-                txtPhong.Text = dr.GetString(12);
+                cbPhong.Text = dr.GetString(12);
                 tenphongban = dr.GetString(12);
                 txtLuong.Text = dr.GetInt32(13).ToString();
             }
@@ -173,6 +189,10 @@ namespace QuanLyNhanSu.CT
             if (gt == "Nam")
                 rdNam.Checked = true;
             else rdNu.Checked = true;
+            if(String.IsNullOrEmpty(pathHinh))
+            {
+                pathHinh = "Hinh/TaoTaiKhoan.png";
+            }
             pictureBox1.Image = Image.FromFile(pathHinh);
             mhd = LayMaHDTuMaNV(manv);
         }
@@ -181,10 +201,11 @@ namespace QuanLyNhanSu.CT
         {
             try
             {
+                Button btn = sender as Button;
                 string MaCV1 = null, MaPB1 = null, gt = null,hinh="";
 
-                MaCV1 = LayMaCv(txtChuc.Text);
-                MaPB1 = LayMaPB(txtPhong.Text);
+                MaCV1 = LayMaCv(cbChuc.Text);
+                MaPB1 = LayMaPB(cbPhong.Text);
                 if (rdNam.Checked == true)
                     gt = "Nam";
                 else
@@ -192,7 +213,7 @@ namespace QuanLyNhanSu.CT
                 if (dem != 0)
                     hinh = pathHinh;
                 else
-                    Base.ShowError("Chưa chọn hình!");
+                    hinh = "Hinh/TaoTaiKhoan.png";
                 dr = cl.SuaThongTinNhanVien(lbMaNV.Text, MaPB1, Convert.ToInt32(txtLuong.Text), txtTen.Text, gt, Convert.ToDateTime(dtpNgaySinh.Text),
                     txtSoCM.Text, txtDT.Text, txtTD.Text, txtDiaChi.Text, txtEmail.Text, txtHonNhan.Text, hinh);
                 dr = cl.CapNhatMaCvTrongHopDong(mhd, MaCV1);
@@ -202,17 +223,17 @@ namespace QuanLyNhanSu.CT
                     dr = cl.CapNhatNgayVaoLam(n2, lbMaNV.Text);
                 int ngay = DateTime.Now.Day, thang = DateTime.Now.Month, nam = DateTime.Now.Year;
                 DateTime n = Convert.ToDateTime(ngay + "/" + thang + "/" + +nam);
-                if (tenchucvu != txtChuc.Text && tenphongban == txtPhong.Text)
+                if (tenchucvu != cbChuc.Text && tenphongban == cbPhong.Text)
                 {
                     dr = cl.SuactChucVu(lbMaNV.Text, macc, n);
                     dr = cl.ThemctChucVu(lbMaNV.Text, MaCV1, DateTime.Now, "Thay đổi chức vụ");
                 }
-                else if (tenchucvu == txtChuc.Text && tenphongban != txtPhong.Text)
+                else if (tenchucvu == cbChuc.Text && tenphongban != cbPhong.Text)
                 {
                     dr = cl.SuactChucVu(lbMaNV.Text, macc, n);
                     dr = cl.ThemctChucVu(lbMaNV.Text, MaCV1, DateTime.Now, "Chuyển phòng ban");
                 }
-                else if (tenchucvu != txtChuc.Text && tenphongban != txtPhong.Text)
+                else if (tenchucvu != cbChuc.Text && tenphongban != cbPhong.Text)
                 {
                     dr = cl.SuactChucVu(lbMaNV.Text, macc, n);
                     dr = cl.ThemctChucVu(lbMaNV.Text, MaCV1, DateTime.Now, "Chuyển chức vụ, Thay đổi chức vụ");
@@ -249,13 +270,13 @@ namespace QuanLyNhanSu.CT
             pictureBox1.Enabled = true;
             btnLuu.Enabled = true;
             txtTen.Text = null;
-            txtChuc.Text = null;
+            cbChuc.Text = null;
             txtDiaChi.Text = null;
             txtDT.Text = null;
             txtEmail.Text = null;
             txtHonNhan.Text = null;
             txtLuong.Text = null;
-            txtPhong.Text = null;
+            cbPhong.Text = null;
             txtSoCM.Text = null;
             txtTD.Text = null;
             btnThem.Enabled = false;
@@ -282,8 +303,8 @@ namespace QuanLyNhanSu.CT
                 else
                     hdm = "HD" + Convert.ToInt32(hd + 1);
 
-                cv = LayMaCv(txtChuc.Text);
-                pb = LayMaPB(txtPhong.Text);
+                cv = LayMaCv(cbChuc.Text);
+                pb = LayMaPB(cbPhong.Text);
 
                 dr = cl.ThemHopDong(hdm, Convert.ToDateTime(dateTimePicker1.Text), Convert.ToInt32(txtLuong.Text), cv, pb);
 
@@ -293,7 +314,7 @@ namespace QuanLyNhanSu.CT
                     manvm = "NV0" + (nv + 1);
                 else
                     manvm = "NV" + (nv + 1);
-                MaPB1 = LayMaPB(txtPhong.Text);
+                MaPB1 = LayMaPB(cbPhong.Text);
                 if (rdNam.Checked == true)
                     gt = "Nam";
                 else

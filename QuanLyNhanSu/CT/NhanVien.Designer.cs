@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
@@ -41,8 +42,8 @@
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtLuong = new System.Windows.Forms.ComboBox();
-            this.txtChuc = new System.Windows.Forms.ComboBox();
-            this.txtPhong = new System.Windows.Forms.ComboBox();
+            this.cbChuc = new System.Windows.Forms.ComboBox();
+            this.cbPhong = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
@@ -109,6 +110,14 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNhanVien,
@@ -118,16 +127,16 @@
             this.dataGridView1.Location = new System.Drawing.Point(40, 325);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(900, 156);
             this.dataGridView1.TabIndex = 3;
@@ -176,8 +185,8 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.txtLuong);
-            this.panel1.Controls.Add(this.txtChuc);
-            this.panel1.Controls.Add(this.txtPhong);
+            this.panel1.Controls.Add(this.cbChuc);
+            this.panel1.Controls.Add(this.cbPhong);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label13);
@@ -238,35 +247,35 @@
             this.txtLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLuong_KeyPress);
             this.txtLuong.Leave += new System.EventHandler(this.txtLuong_Leave);
             // 
-            // txtChuc
+            // cbChuc
             // 
-            this.txtChuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChuc.FormattingEnabled = true;
-            this.txtChuc.Items.AddRange(new object[] {
+            this.cbChuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbChuc.FormattingEnabled = true;
+            this.cbChuc.Items.AddRange(new object[] {
             "Giám Đốc",
             "Phó Giám Đốc",
             "Trưởng Phòng",
             "Phó Phòng",
             "Nhân Viên"});
-            this.txtChuc.Location = new System.Drawing.Point(121, 164);
-            this.txtChuc.Name = "txtChuc";
-            this.txtChuc.Size = new System.Drawing.Size(168, 28);
-            this.txtChuc.TabIndex = 3;
+            this.cbChuc.Location = new System.Drawing.Point(121, 164);
+            this.cbChuc.Name = "cbChuc";
+            this.cbChuc.Size = new System.Drawing.Size(168, 28);
+            this.cbChuc.TabIndex = 3;
             // 
-            // txtPhong
+            // cbPhong
             // 
-            this.txtPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhong.FormattingEnabled = true;
-            this.txtPhong.Items.AddRange(new object[] {
+            this.cbPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPhong.FormattingEnabled = true;
+            this.cbPhong.Items.AddRange(new object[] {
             "Phòng Giám Đốc",
             "Phòng Phó Giám Đốc",
             "Phòng Kế Toán",
             "Phòng Kinh Doanh",
             "Phòng Kỹ Thuật"});
-            this.txtPhong.Location = new System.Drawing.Point(121, 128);
-            this.txtPhong.Name = "txtPhong";
-            this.txtPhong.Size = new System.Drawing.Size(168, 28);
-            this.txtPhong.TabIndex = 2;
+            this.cbPhong.Location = new System.Drawing.Point(121, 128);
+            this.cbPhong.Name = "cbPhong";
+            this.cbPhong.Size = new System.Drawing.Size(168, 28);
+            this.cbPhong.TabIndex = 2;
             // 
             // label9
             // 
@@ -617,8 +626,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox txtChuc;
-        private System.Windows.Forms.ComboBox txtPhong;
+        private System.Windows.Forms.ComboBox cbChuc;
+        private System.Windows.Forms.ComboBox cbPhong;
         private System.Windows.Forms.ComboBox txtLuong;
         private System.Windows.Forms.Button btnLuu;
     }

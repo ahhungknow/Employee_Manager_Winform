@@ -112,12 +112,6 @@
     <Compile Include="CT\ThuongPhat.Designer.cs">
       <DependentUpon>ThuongPhat.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\TimTrenWeb.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CT\TimTrenWeb.Designer.cs">
-      <DependentUpon>TimTrenWeb.cs</DependentUpon>
-    </Compile>
     <Compile Include="CT\TinhLuong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -250,9 +244,6 @@
     <EmbeddedResource Include="CT\ThuongPhat.resx">
       <DependentUpon>ThuongPhat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\TimTrenWeb.resx">
-      <DependentUpon>TimTrenWeb.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CT\TinhLuong.resx">
       <DependentUpon>TinhLuong.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,7 +301,6 @@
     <EmbeddedResource Include="ThongKe\tkXemccTheoTen.resx">
       <DependentUpon>tkXemccTheoTen.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bin\Debug\Hinh\Nguyen Van Quang" />
     <None Include="bin\Debug\KetNoi\ketnoi.ini" />
     <None Include="bin\Debug\QuanLyNhanSu.exe.config" />
     <None Include="bin\Debug\QuanLyNhanSu.vshost.exe.config" />
@@ -329,8 +319,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\Hinh\admin.jpg" />
-    <Content Include="bin\Debug\Hinh\admin.png" />
     <Content Include="bin\Debug\Hinh\ajax-loader.gif" />
     <Content Include="bin\Debug\Hinh\baohiem.jpg" />
     <Content Include="bin\Debug\Hinh\chamcong.jpg" />
@@ -340,12 +328,10 @@
     <Content Include="bin\Debug\Hinh\doimatkhau.png" />
     <Content Include="bin\Debug\Hinh\Khenthuong.jpg" />
     <Content Include="bin\Debug\Hinh\kht.jpg" />
-    <Content Include="bin\Debug\Hinh\khung.png" />
     <Content Include="bin\Debug\Hinh\luong.png" />
     <Content Include="bin\Debug\Hinh\nhan vien.png" />
     <Content Include="bin\Debug\Hinh\Phongban.png" />
     <Content Include="bin\Debug\Hinh\phucap.jpg" />
-    <Content Include="bin\Debug\Hinh\taolao.png" />
     <Content Include="bin\Debug\Hinh\TaoTaikhoan.png" />
     <Content Include="bin\Debug\Hinh\thoat.png" />
     <Content Include="bin\Debug\Hinh\thongtin.png" />
