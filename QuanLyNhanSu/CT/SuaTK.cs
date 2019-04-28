@@ -27,7 +27,6 @@ namespace QuanLyNhanSu.CT
         {
             dem = 0;
             TaoTaiKhoan ttk = new TaoTaiKhoan();
-            this.Controls.Clear();
             this.Controls.Add(ttk);
             dt.Clear();
             dt = cl.NvCoTK("0");
