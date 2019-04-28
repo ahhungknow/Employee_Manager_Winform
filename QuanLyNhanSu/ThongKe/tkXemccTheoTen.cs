@@ -19,6 +19,7 @@ namespace QuanLyNhanSu.ThongKe
             InitializeComponent();
         }
         tkCauLenh tkcl = new tkCauLenh();
+        CauLenh cl = new CauLenh();
         DataTable dt = new DataTable();
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -32,7 +33,7 @@ namespace QuanLyNhanSu.ThongKe
                 DateTime ngaydau = Convert.ToDateTime("01/" + Convert.ToInt32(cbThang.Text) + "/" + Convert.ToInt32(cbNam.Text) + " ");
                 DateTime ngaycuoi = Convert.ToDateTime("29/" + Convert.ToInt32(cbThang.Text) + "/" + Convert.ToInt32(cbNam.Text) + " ");
                 dt.Clear();
-                dt = tkcl.tkccXemTheoTenVaPhongBan(txtTen.Text, "abc", ngaydau, ngaycuoi, 1);
+                dt = tkcl.tkccXemTheoTenVaPhongBan(cbTen.SelectedValue.ToString(), "abc", ngaydau, ngaycuoi, 1);
                 dataGridView1.DataSource = dt;
             }
             catch (Exception)
@@ -42,7 +43,9 @@ namespace QuanLyNhanSu.ThongKe
         }
         private void load()
         {
-            btXem.Enabled = false;
+            cbTen.DataSource = cl.TatCaNhanVien();
+            cbTen.DisplayMember = "TenNV";
+            cbTen.ValueMember = "MaNhanVien";
         }
         private void tkXemccTheoTen_Load(object sender, EventArgs e)
         {

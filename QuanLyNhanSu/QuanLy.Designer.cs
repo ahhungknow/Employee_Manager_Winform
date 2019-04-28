@@ -40,7 +40,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
@@ -91,6 +90,8 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
             this.label1.Location = new System.Drawing.Point(1, 639);
             this.label1.Margin = new System.Windows.Forms.Padding(30, 0, 3, 0);
             this.label1.Name = "label1";
@@ -102,6 +103,8 @@
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
             this.label2.Location = new System.Drawing.Point(845, 639);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 23);
@@ -116,6 +119,7 @@
             // 
             // pnLoad
             // 
+            this.pnLoad.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnLoad.Controls.Add(this.label3);
             this.pnLoad.Location = new System.Drawing.Point(-1, 134);
             this.pnLoad.Name = "pnLoad";
@@ -139,7 +143,6 @@
             this.tabPage5.Controls.Add(this.label17);
             this.tabPage5.Controls.Add(this.label16);
             this.tabPage5.Controls.Add(this.button19);
-            this.tabPage5.Controls.Add(this.button20);
             this.tabPage5.Controls.Add(this.button21);
             this.tabPage5.Location = new System.Drawing.Point(4, 28);
             this.tabPage5.Name = "tabPage5";
@@ -152,7 +155,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(288, 79);
+            this.label18.Location = new System.Drawing.Point(170, 79);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(56, 15);
             this.label18.TabIndex = 9;
@@ -163,9 +166,8 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(160, 79);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(55, 15);
+            this.label17.Size = new System.Drawing.Size(0, 15);
             this.label17.TabIndex = 9;
-            this.label17.Text = "label16";
             // 
             // label16
             // 
@@ -178,22 +180,18 @@
             // 
             // button19
             // 
-            this.button19.Location = new System.Drawing.Point(281, 6);
+            this.button19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button19.BackgroundImage")));
+            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button19.Location = new System.Drawing.Point(163, 6);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(70, 70);
             this.button19.TabIndex = 6;
             this.button19.UseVisualStyleBackColor = true;
             // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(163, 6);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(70, 70);
-            this.button20.TabIndex = 7;
-            this.button20.UseVisualStyleBackColor = true;
-            // 
             // button21
             // 
+            this.button21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button21.BackgroundImage")));
+            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button21.Location = new System.Drawing.Point(45, 6);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(70, 70);
@@ -215,17 +213,17 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(981, 100);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Chức Năng Phụ";
+            this.tabPage4.Text = "Chức năng thêm";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(390, 78);
+            this.label15.Location = new System.Drawing.Point(412, 79);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(113, 15);
+            this.label15.Size = new System.Drawing.Size(50, 15);
             this.label15.TabIndex = 10;
-            this.label15.Text = "Kế Hoạch Tháng";
+            this.label15.Text = "Hưu trí";
             // 
             // button7
             // 
@@ -465,7 +463,8 @@
             // 
             // btnPhongBan
             // 
-            this.btnPhongBan.Image = ((System.Drawing.Image)(resources.GetObject("btnPhongBan.Image")));
+            this.btnPhongBan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPhongBan.BackgroundImage")));
+            this.btnPhongBan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPhongBan.Location = new System.Drawing.Point(45, 5);
             this.btnPhongBan.Name = "btnPhongBan";
             this.btnPhongBan.Size = new System.Drawing.Size(70, 70);
@@ -648,7 +647,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label21;

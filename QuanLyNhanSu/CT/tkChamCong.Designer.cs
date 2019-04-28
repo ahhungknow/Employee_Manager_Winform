@@ -43,7 +43,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.radioButton7);
             this.panel1.Controls.Add(this.radioButton6);
             this.panel1.Controls.Add(this.rdNCPNN);
@@ -156,7 +156,7 @@
             // 
             // pnLoad
             // 
-            this.pnLoad.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnLoad.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnLoad.Location = new System.Drawing.Point(353, 20);
             this.pnLoad.Name = "pnLoad";
             this.pnLoad.Size = new System.Drawing.Size(610, 460);
@@ -166,6 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.pnLoad);
             this.Controls.Add(this.panel1);
             this.Name = "tkChamCong";

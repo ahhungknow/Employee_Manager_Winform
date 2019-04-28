@@ -53,8 +53,8 @@ namespace QuanLyNhanSu
 
             SqlCommand cm = new SqlCommand("tkccXemTheoTenVaPhongBan", con);
             cm.CommandType = CommandType.StoredProcedure;
-            cm.Parameters.AddWithValue("@tennv", tennv);
-            cm.Parameters.AddWithValue("@tenpb", tenpb);
+            cm.Parameters.AddWithValue("@manv", tennv);
+            cm.Parameters.AddWithValue("@mapb", tenpb);
             cm.Parameters.AddWithValue("@ngaydau", ngaydau);
             cm.Parameters.AddWithValue("@ngaycuoi", ngaycuoi);
             cm.Parameters.AddWithValue("@khoa", khoa);

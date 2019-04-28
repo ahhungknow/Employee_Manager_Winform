@@ -85,7 +85,9 @@ namespace QuanLyNhanSu.CT
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            ThongKe.employeeName abcd = new ThongKe.employeeName(dataGridView1.CurrentRow.Cells["MaNhanVien"].Value.ToString());
+            panel1.Controls.Clear();
+            panel1.Controls.Add(abcd);
             txtTen.Text = dataGridView1.CurrentRow.Cells["TenPC"].Value.ToString();
             loai = dataGridView1.CurrentRow.Cells["TenPC"].Value.ToString();
             txtTien.Text = dataGridView1.CurrentRow.Cells["Tien"].Value.ToString();
