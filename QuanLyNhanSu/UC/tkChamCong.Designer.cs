@@ -137,10 +137,10 @@
             this.rdNTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdNTT.Location = new System.Drawing.Point(16, 51);
             this.rdNTT.Name = "rdNTT";
-            this.rdNTT.Size = new System.Drawing.Size(265, 23);
+            this.rdNTT.Size = new System.Drawing.Size(194, 23);
             this.rdNTT.TabIndex = 1;
             this.rdNTT.TabStop = true;
-            this.rdNTT.Text = "Xem Nhân viên nghỉ làm trong ngày";
+            this.rdNTT.Text = "Xem Nhân viên nghỉ làm ";
             this.rdNTT.UseVisualStyleBackColor = true;
             this.rdNTT.CheckedChanged += new System.EventHandler(this.rdNTT_CheckedChanged);
             // 

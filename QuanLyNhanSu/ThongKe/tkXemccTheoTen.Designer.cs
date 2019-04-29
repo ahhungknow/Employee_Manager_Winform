@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cbTen = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,9 +112,9 @@
             // btXem
             // 
             this.btXem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXem.Location = new System.Drawing.Point(379, 85);
+            this.btXem.Location = new System.Drawing.Point(376, 64);
             this.btXem.Name = "btXem";
-            this.btXem.Size = new System.Drawing.Size(164, 33);
+            this.btXem.Size = new System.Drawing.Size(137, 33);
             this.btXem.TabIndex = 11;
             this.btXem.Text = "Xem";
             this.btXem.UseVisualStyleBackColor = true;
@@ -203,11 +204,23 @@
             this.cbTen.Size = new System.Drawing.Size(155, 27);
             this.cbTen.TabIndex = 12;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(376, 103);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 30);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Xuất báo cáo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // tkXemccTheoTen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cbTen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btXem);
@@ -241,5 +254,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ng;
         private System.Windows.Forms.ComboBox cbTen;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Xml;
+using Xceed.Words.NET;
+using System.IO;
+using System.Diagnostics;
 
 namespace QuanLyNhanSu.ThongKe
 {
@@ -22,6 +26,7 @@ namespace QuanLyNhanSu.ThongKe
         DataTable dt = new DataTable();
         int thang = DateTime.Now.Month, nam = DateTime.Now.Year, ngay = DateTime.Now.Day;
         DateTime n;
+        int check = 0;
         private void btXem_Click(object sender, EventArgs e)
         {
             try
@@ -51,6 +56,7 @@ namespace QuanLyNhanSu.ThongKe
                         dt.Clear();
                         dt = tkcl.tkNhanVienNghiCoPhep(ngaydau, ngaycuoi, 0);
                         dtgv.DataSource = dt;
+                       
                     }
                     catch (Exception)
                     {
@@ -75,6 +81,27 @@ namespace QuanLyNhanSu.ThongKe
             load();
         }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            exportFile();
+            try
+            {
+                if (File.Exists(@"newNghiCoPhepReport.docx"))
+                {
+                    Process.Start(AppDomain.CurrentDomain.BaseDirectory + @"\newNghiCoPhepReport.docx");
+                }
+                else
+                {
+                    Base.ShowError("Không tìm thấy file báo cáo!");
+                }
+            }
+            catch
+            {
+                Base.ShowError("Có lỗi xảy ra!");
+            }
+
+        }
+
         private void rdNTN_CheckedChanged(object sender, EventArgs e)
         {
             txtNgay.Enabled = true;
@@ -90,5 +117,97 @@ namespace QuanLyNhanSu.ThongKe
             cbNam.Enabled = true;
             btXem.Enabled = true;
         }
+
+
+        #region DocX
+        public void exportFile()
+        {
+            DocX docX;
+            try
+            {
+                if (File.Exists(@"NghiCoPhepReportTemplate.docx"))
+                {
+                    docX = CreateWordFromTemplate(DocX.Load(@"NghiCoPhepReportTemplate.docx"));
+                    docX.SaveAs(@"newNghiCoPhepReport.docx");
+                }
+                else
+                {
+                    Base.ShowError("Không tìm thấy file mẫu báo cáo!");
+                }
+            }
+            catch (Exception ex)
+            {
+                Base.ShowError("Lỗi khi tạo báo cáo!");
+            }
+        }
+        public DocX CreateWordFromTemplate(DocX template)
+        {
+            template.AddCustomProperty(new CustomProperty("ReportTitle", "Báo cáo nhân viên nghỉ có phép"));
+            if (check == 1)
+            {
+                template.AddCustomProperty(new CustomProperty("Ngay", ngay + "/" + thang + "/" + nam));
+                check = 0;
+            }
+            else
+                template.AddCustomProperty(new CustomProperty("Ngay",  "00/" + thang + "/" + nam));
+            template.AddCustomProperty(new CustomProperty("CountNV", dtgv.Rows.Count));
+
+            var t = template.Tables[0];
+            CreateAndInsertWordTableAfter(t, ref template);
+            t.Remove();
+            return template;
+        }
+
+        private void TxtNgay_TextChanged(object sender, EventArgs e)
+        {
+            check = 1;
+        }
+
+        public Table CreateAndInsertWordTableAfter(Table t, ref DocX document)
+        {
+            var data = GetDataFromDatabase();
+
+            var invoiceTable = t.InsertTableAfterSelf(data.Rows.Count + 1, data.Columns.Count);
+            invoiceTable.Design = TableDesign.DarkListAccent5;
+            invoiceTable.Alignment = Alignment.center;
+           
+
+            var tableTitle = new Xceed.Words.NET.Formatting();
+
+            tableTitle.Bold = true;
+           
+
+            invoiceTable.Rows[0].Cells[0].InsertParagraph("Mã nhân viên", false, tableTitle);
+            invoiceTable.Rows[0].Cells[1].InsertParagraph("Tên nhân viên", false, tableTitle);
+            invoiceTable.Rows[0].Cells[2].InsertParagraph("Ngày", false, tableTitle);
+
+            for (var row = 1; row < invoiceTable.RowCount; row++)
+            {
+                for (var cell = 0; cell < invoiceTable.ColumnCount; cell++)
+                {
+                    invoiceTable.Rows[row].Cells[cell].InsertParagraph(data.Rows[row - 1].ItemArray[cell].ToString(), false);
+                }
+            }
+            return invoiceTable;
+        }
+
+        public DataTable GetDataFromDatabase()
+        {
+            var table = new DataTable();
+            table.Columns.AddRange(new DataColumn[]
+            {
+                new DataColumn(),
+                new DataColumn(),
+                new DataColumn()
+            });
+            
+            foreach (DataGridViewRow item in dtgv.Rows)
+            {
+                table.Rows.Add(item.Cells[0].Value.ToString(), item.Cells[1].Value.ToString(), Convert.ToDateTime(item.Cells[2].Value.ToString()).ToShortDateString());
+            }
+
+            return table;
+        }
+        #endregion
     }
 }

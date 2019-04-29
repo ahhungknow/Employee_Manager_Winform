@@ -1,4 +1,5 @@
-﻿using QuanLyNhanSu.UC;
+﻿using QuanLyNhanSu.ThongKe;
+using QuanLyNhanSu.UC;
 using System;
 using System.Windows.Forms;
 
@@ -203,6 +204,13 @@ namespace QuanLyNhanSu
             Info info = new Info();
             pnLoad.Controls.Clear();
             pnLoad.Controls.Add(info);
+        }
+
+        private void Button7_Click(object sender, EventArgs e)
+        {
+            tkLuong tkLuong = new tkLuong();
+            pnLoad.Controls.Clear();
+            pnLoad.Controls.Add(tkLuong);
         }
     }
 }

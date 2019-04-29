@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +103,7 @@
             this.btXem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXem.Location = new System.Drawing.Point(333, 87);
             this.btXem.Name = "btXem";
-            this.btXem.Size = new System.Drawing.Size(144, 27);
+            this.btXem.Size = new System.Drawing.Size(117, 28);
             this.btXem.TabIndex = 36;
             this.btXem.Text = "Xem";
             this.btXem.UseVisualStyleBackColor = true;
@@ -174,11 +175,23 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Số Ngày Đi Làm";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(456, 87);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 28);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "Xuất báo cáo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // tkSoNgayDiLam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btXem);
             this.Controls.Add(this.cbNam);
@@ -207,5 +220,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ng;
+        private System.Windows.Forms.Button button1;
     }
 }

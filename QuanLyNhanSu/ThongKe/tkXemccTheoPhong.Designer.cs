@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbPhong = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +112,7 @@
             // btXem
             // 
             this.btXem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXem.Location = new System.Drawing.Point(396, 86);
+            this.btXem.Location = new System.Drawing.Point(383, 69);
             this.btXem.Name = "btXem";
             this.btXem.Size = new System.Drawing.Size(139, 34);
             this.btXem.TabIndex = 20;
@@ -203,11 +204,23 @@
             this.cbPhong.Size = new System.Drawing.Size(147, 27);
             this.cbPhong.TabIndex = 21;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(383, 109);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(139, 34);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Xuất báo cáo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // tkXemccTheoPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cbPhong);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btXem);
@@ -240,5 +253,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ng;
         private System.Windows.Forms.ComboBox cbPhong;
+        private System.Windows.Forms.Button button1;
     }
 }

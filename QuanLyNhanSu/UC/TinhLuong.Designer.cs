@@ -57,6 +57,7 @@
             this.txtThang = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lbTB = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -306,7 +307,7 @@
             // txtNam
             // 
             this.txtNam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNam.Location = new System.Drawing.Point(799, 467);
+            this.txtNam.Location = new System.Drawing.Point(244, 469);
             this.txtNam.Name = "txtNam";
             this.txtNam.Size = new System.Drawing.Size(69, 26);
             this.txtNam.TabIndex = 1;
@@ -316,7 +317,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(587, 470);
+            this.label7.Location = new System.Drawing.Point(32, 472);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(144, 19);
             this.label7.TabIndex = 2;
@@ -325,7 +326,7 @@
             // btXem
             // 
             this.btXem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXem.Location = new System.Drawing.Point(874, 463);
+            this.btXem.Location = new System.Drawing.Point(319, 465);
             this.btXem.Name = "btXem";
             this.btXem.Size = new System.Drawing.Size(89, 33);
             this.btXem.TabIndex = 9;
@@ -336,7 +337,7 @@
             // txtThang
             // 
             this.txtThang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThang.Location = new System.Drawing.Point(737, 467);
+            this.txtThang.Location = new System.Drawing.Point(182, 469);
             this.txtThang.Name = "txtThang";
             this.txtThang.Size = new System.Drawing.Size(35, 26);
             this.txtThang.TabIndex = 1;
@@ -346,7 +347,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(778, 466);
+            this.label8.Location = new System.Drawing.Point(223, 468);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(15, 24);
             this.label8.TabIndex = 2;
@@ -363,10 +364,22 @@
             this.lbTB.TabIndex = 2;
             this.lbTB.Text = ".";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(787, 465);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 33);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Xuất ra Excel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // TinhLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btXem);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtThang);
@@ -414,5 +427,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PC;
         private System.Windows.Forms.DataGridViewTextBoxColumn P;
         private System.Windows.Forms.DataGridViewTextBoxColumn TL;
+        private System.Windows.Forms.Button button1;
     }
 }
