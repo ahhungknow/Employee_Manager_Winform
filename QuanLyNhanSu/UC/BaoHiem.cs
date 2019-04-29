@@ -96,6 +96,9 @@ namespace QuanLyNhanSu.CT
 
         private void btThem_Click(object sender, EventArgs e)
         {
+            btThem.Enabled = false;
+            btSua.Enabled = false;
+            btXoa.Enabled = false;
             btLuu.Enabled = true;
             txtSo.Text = null;
             txtNoiCap.Text = null;
@@ -107,12 +110,12 @@ namespace QuanLyNhanSu.CT
             try
             {
                 dr = cl.ThemBaoHiem(manv, cbLoai.Text, txtSo.Text, dtpNgayCap.Value, dtpNgayHH.Value, txtNoiCap.Text);
-                lbTB.Text = "Đã lưu!!";
+                Base.ShowCompleteMessage(1, cbLoai.Text);
                 load();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi! \n" + ex);
+                Base.ShowError("Lỗi khi thêm bảo hiểm!");
             }
         }
 
@@ -124,12 +127,13 @@ namespace QuanLyNhanSu.CT
                 if (MessageBox.Show("Bạn thật sự muốn Sửa!", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
                     dr = cl.SuaBaoHiem(manv, loai, cbLoai.Text, txtSo.Text, dtpNgayCap.Value, dtpNgayHH.Value, txtNoiCap.Text);
+                    Base.ShowCompleteMessage(2, cbLoai.Text);
                     load();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi! \n" + ex);
+                Base.ShowError("Lỗi khi sửa bảo hiểm!");
             }
         }
 
@@ -141,12 +145,16 @@ namespace QuanLyNhanSu.CT
                 if (MessageBox.Show("Bạn thật sự muốn xóa!", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
                     dr = cl.XoaBaoHiem(manv, loai);
+                    Base.ShowCompleteMessage(3, loai);
+                    txtNoiCap.ResetText();
+                    txtSo.ResetText();
+                    txtTen.ResetText();
                     load();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi! \n" + ex);
+                Base.ShowError("Lỗi khi xóa bảo hiểm!");
             }
         }
     }

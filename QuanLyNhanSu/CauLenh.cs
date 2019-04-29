@@ -77,6 +77,20 @@ namespace QuanLyNhanSu
             dr = cm.ExecuteReader();
             return dr;
         }
+
+        public DataTable TatCaNhanVien()
+        {
+            if (con.State == ConnectionState.Open)
+                con.Close();
+            con.Open();
+
+            SqlCommand cm = new SqlCommand("TatCaNhanVien", con);
+            cm.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(dt);
+            return dt;
+        }
+
         public DataTable LayTenNhanVien1(string manhanvien)
         {
             if (con.State == ConnectionState.Open)
@@ -794,6 +808,22 @@ namespace QuanLyNhanSu
             da.Fill(dt);
             return dt;
         }
+
+        public DataTable LayThuongPhatNhanVien(string mapb, DateTime ngaydau, DateTime ngaycuoi)
+        {
+            if (con.State == ConnectionState.Open)
+                con.Close();
+            con.Open();
+            SqlCommand cm = new SqlCommand("LayThuongPhatNhanVien", con);
+            cm.CommandType = CommandType.StoredProcedure;
+            cm.Parameters.AddWithValue("@mapb", mapb);
+            cm.Parameters.AddWithValue("@ngaydau", ngaydau);
+            cm.Parameters.AddWithValue("@ngaycuoi", ngaycuoi);
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(dt);
+            return dt;
+        }
+
         public SqlDataReader XoaThuongPhat(string manv, string loai, int tien, string lydo)
         {
             if (con.State == ConnectionState.Open)
@@ -845,6 +875,30 @@ namespace QuanLyNhanSu
             SqlCommand cm = new SqlCommand("LayChucVu", con);
             cm.CommandType = CommandType.StoredProcedure;
             cm.Parameters.AddWithValue("@ma", ma);
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable LayPhongBan(string ma = null)
+        {
+            if (con.State == ConnectionState.Open)
+                con.Close();
+            con.Open();
+            SqlCommand cm = new SqlCommand("LayPhongBan", con);
+            cm.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable TatCaChucVu()
+        {
+            if (con.State == ConnectionState.Open)
+                con.Close();
+            con.Open();
+            SqlCommand cm = new SqlCommand("TatCaChucVu", con);
+            cm.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(cm);
             da.Fill(dt);
             return dt;
@@ -985,6 +1039,49 @@ namespace QuanLyNhanSu
             da.Fill(dt);
             return dt;
         }
+
+        public DataTable TongTienThuong(DateTime tungay,DateTime denngay)
+        {
+            if (con.State == ConnectionState.Open)
+                con.Close();
+            con.Open();
+            SqlCommand cm = new SqlCommand("TongTienThuong", con);
+            cm.CommandType = CommandType.StoredProcedure;
+            cm.Parameters.AddWithValue("@ngaydau",tungay);
+            cm.Parameters.AddWithValue("@ngaycuoi", denngay);
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable TongTienPhat(DateTime tungay, DateTime denngay)
+        {
+            if (con.State == ConnectionState.Open)
+                con.Close();
+            con.Open();
+            SqlCommand cm = new SqlCommand("TongTienPhat", con);
+            cm.CommandType = CommandType.StoredProcedure;
+            cm.Parameters.AddWithValue("@ngaydau", tungay);
+            cm.Parameters.AddWithValue("@ngaycuoi", denngay);
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable TongTienPhuCap(DateTime tungay, DateTime denngay)
+        {
+            if (con.State == ConnectionState.Open)
+                con.Close();
+            con.Open();
+            SqlCommand cm = new SqlCommand("TongTienPhuCap", con);
+            cm.CommandType = CommandType.StoredProcedure;
+            cm.Parameters.AddWithValue("@ngaydau", tungay);
+            cm.Parameters.AddWithValue("@ngaycuoi", denngay);
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(dt);
+            return dt;
+        }
+
         public SqlDataReader ThemPhuCap(string manv, string loaipc, int tien, DateTime tungay, DateTime denngay)
         {
             if (con.State == ConnectionState.Open)

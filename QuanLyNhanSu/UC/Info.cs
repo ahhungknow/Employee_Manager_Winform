@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyNhanSu.CT
+namespace QuanLyNhanSu.UC
 {
-    public partial class TimTrenWeb : UserControl
+    public partial class Info : UserControl
     {
-        public TimTrenWeb()
+        public Info()
         {
             InitializeComponent();
+        }
+
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://fb.com/quanguii");
         }
     }
 }

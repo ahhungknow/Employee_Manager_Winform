@@ -31,15 +31,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ng = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btXem = new System.Windows.Forms.Button();
             this.cbNam = new System.Windows.Forms.ComboBox();
             this.cbThang = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,86 +75,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(610, 294);
             this.dataGridView1.TabIndex = 30;
             // 
-            // btXem
-            // 
-            this.btXem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXem.Location = new System.Drawing.Point(351, 86);
-            this.btXem.Name = "btXem";
-            this.btXem.Size = new System.Drawing.Size(147, 29);
-            this.btXem.TabIndex = 36;
-            this.btXem.Text = "Xem";
-            this.btXem.UseVisualStyleBackColor = true;
-            this.btXem.Click += new System.EventHandler(this.btXem_Click);
-            // 
-            // cbNam
-            // 
-            this.cbNam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNam.FormattingEnabled = true;
-            this.cbNam.Items.AddRange(new object[] {
-            "2016",
-            "2017",
-            "2018",
-            "2019",
-            "2020"});
-            this.cbNam.Location = new System.Drawing.Point(258, 88);
-            this.cbNam.Name = "cbNam";
-            this.cbNam.Size = new System.Drawing.Size(63, 27);
-            this.cbNam.TabIndex = 34;
-            this.cbNam.SelectedIndexChanged += new System.EventHandler(this.cbNam_SelectedIndexChanged);
-            // 
-            // cbThang
-            // 
-            this.cbThang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbThang.FormattingEnabled = true;
-            this.cbThang.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12"});
-            this.cbThang.Location = new System.Drawing.Point(188, 88);
-            this.cbThang.Name = "cbThang";
-            this.cbThang.Size = new System.Drawing.Size(45, 27);
-            this.cbThang.TabIndex = 35;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(239, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 16);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "/";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 19);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Xem Theo Tháng";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(155, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(313, 31);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Số Ngày Nghỉ Có Phép";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // MaNV
             // 
             this.MaNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -177,11 +98,101 @@
             this.Ng.Name = "Ng";
             this.Ng.ReadOnly = true;
             // 
+            // btXem
+            // 
+            this.btXem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXem.Location = new System.Drawing.Point(319, 112);
+            this.btXem.Name = "btXem";
+            this.btXem.Size = new System.Drawing.Size(123, 29);
+            this.btXem.TabIndex = 36;
+            this.btXem.Text = "Xem";
+            this.btXem.UseVisualStyleBackColor = true;
+            this.btXem.Click += new System.EventHandler(this.btXem_Click);
+            // 
+            // cbNam
+            // 
+            this.cbNam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNam.FormattingEnabled = true;
+            this.cbNam.Items.AddRange(new object[] {
+            "2019",
+            "2020",
+            "2021"});
+            this.cbNam.Location = new System.Drawing.Point(226, 114);
+            this.cbNam.Name = "cbNam";
+            this.cbNam.Size = new System.Drawing.Size(63, 27);
+            this.cbNam.TabIndex = 34;
+            this.cbNam.SelectedIndexChanged += new System.EventHandler(this.cbNam_SelectedIndexChanged);
+            // 
+            // cbThang
+            // 
+            this.cbThang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbThang.FormattingEnabled = true;
+            this.cbThang.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
+            this.cbThang.Location = new System.Drawing.Point(156, 114);
+            this.cbThang.Name = "cbThang";
+            this.cbThang.Size = new System.Drawing.Size(45, 27);
+            this.cbThang.TabIndex = 35;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(207, 117);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 16);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "/";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(26, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 19);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Xem Theo Tháng";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(155, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(280, 31);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Số Ngày Nghỉ Có Phép";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(448, 112);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 29);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "Xuất báo cáo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // tkSoNgayNghiCoPhep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btXem);
             this.Controls.Add(this.cbNam);
@@ -210,5 +221,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ng;
+        private System.Windows.Forms.Button button1;
     }
 }

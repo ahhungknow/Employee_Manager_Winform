@@ -24,8 +24,6 @@ namespace QuanLyNhanSu.CT
             dt = cl.LayChucVu("0");
             dataGridView1.DataSource = dt;
             btnLuu.Enabled = false;
-            txtTenCV.Text = null;
-            txtMaCV.Text = null;
             lbTB.Text = null;
         }
 
@@ -36,6 +34,7 @@ namespace QuanLyNhanSu.CT
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            btnThem.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
             btnLuu.Enabled = true;
@@ -124,6 +123,8 @@ namespace QuanLyNhanSu.CT
                     dr = cl.XoaCapNhat(txtMaCV.Text);
                     Base.ShowCompleteMessage(3, txtTenCV.Text);
                     load();
+                    txtTenCV.Text = null;
+                    txtMaCV.Text = null;
                 }
             }
             catch (Exception)

@@ -966,8 +966,8 @@ as
 go
 
 Create proc [dbo].[tkccXemTheoTenVaPhongBan]
-@tennv nvarchar(50),
-@tenpb nvarchar(20),
+@manv nvarchar(50),
+@mapb nvarchar(20),
 @ngaydau date,
 @ngaycuoi date,
 @khoa int
@@ -1016,3 +1016,72 @@ begin
 	where (TenNV like '%'+@tukhoa+'%' or SoCM like '%'+@tukhoa+'%' or DienThoai like '%'+@tukhoa+'%' or TrinhDoHV like '%'+@tukhoa+'%' or DiaChi like '%'+@tukhoa+'%' 
 		or Email like '%'+@tukhoa+'%' or TTHonNhan like '%'+@tukhoa+'%' or TenCv like '%'+@tukhoa+'%' or TenPB like '%'+@tukhoa+'%')
 end
+
+go
+
+Create proc [dbo].[LayPhongBan]
+as
+	begin
+		select * from PhongBan
+	end
+
+go
+
+Create proc [dbo].[TatCaNhanVien]
+as
+	begin
+		select * from NhanVien
+	end
+
+
+go
+
+Create proc [dbo].[LayThuongPhatNhanVien]
+@mapb varchar(5),
+@ngaydau date,
+@ngaycuoi date
+as
+	if(@mapb = '0')
+	begin
+		select TenNV, Loai, Tien, LyDo
+		from NhanVien left join ThuongPhat on NhanVien.MaNhanVien = ThuongPhat.MaNhanVien
+		where (Ngay >= @ngaydau and Ngay <= @ngaycuoi)
+	end
+	else
+	begin
+		select TenNV, Loai, Tien, LyDo
+		from NhanVien left join ThuongPhat on NhanVien.MaNhanVien = ThuongPhat.MaNhanVien
+		where (@mapb = MaPB and (Ngay >= @ngaydau and Ngay <= @ngaycuoi))
+	end
+
+
+go
+
+Create proc [dbo].[TongTienThuong]
+@ngaydau date,
+@ngaycuoi date
+as
+	begin
+		select sum(Tien) from ThuongPhat where Loai=N'Thưởng' and Ngay>=@ngaydau and Ngay<=@ngaycuoi
+	end
+
+go
+
+Create proc [dbo].[TongTienPhat]
+@ngaydau date,
+@ngaycuoi date
+as
+	begin
+		select sum(Tien) from ThuongPhat where Loai=N'Phạt' and Ngay>=@ngaydau and Ngay<=@ngaycuoi
+	end
+
+go
+
+Create proc [dbo].[TongTienPhuCap]
+@ngaydau date,
+@ngaycuoi date
+as
+	begin
+		select sum(Tien) from PhuCap where TuNgay>=@ngaydau and DenNgay<=@ngaycuoi
+	end
+

@@ -85,11 +85,10 @@
             this.cbNam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNam.FormattingEnabled = true;
             this.cbNam.Items.AddRange(new object[] {
-            "2016",
-            "2017",
-            "2018",
             "2019",
-            "2020"});
+            "2020",
+            "2021",
+            "2022"});
             this.cbNam.Location = new System.Drawing.Point(703, 72);
             this.cbNam.Name = "cbNam";
             this.cbNam.Size = new System.Drawing.Size(94, 27);
@@ -252,7 +251,7 @@
             // 
             // txtT
             // 
-            this.txtT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtT.Location = new System.Drawing.Point(638, 273);
             this.txtT.Name = "txtT";
             this.txtT.Size = new System.Drawing.Size(180, 26);
@@ -293,10 +292,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(183, 65);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(180, 31);
+            this.label9.Size = new System.Drawing.Size(168, 31);
             this.label9.TabIndex = 4;
             this.label9.Text = "Thưởng Phạt";
             // 
@@ -324,7 +323,7 @@
             // 
             // txtLyDo
             // 
-            this.txtLyDo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLyDo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLyDo.Location = new System.Drawing.Point(638, 148);
             this.txtLyDo.Multiline = true;
             this.txtLyDo.Name = "txtLyDo";

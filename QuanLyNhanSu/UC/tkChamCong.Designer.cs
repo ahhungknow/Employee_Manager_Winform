@@ -43,7 +43,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.radioButton7);
             this.panel1.Controls.Add(this.radioButton6);
             this.panel1.Controls.Add(this.rdNCPNN);
@@ -137,26 +137,26 @@
             this.rdNTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdNTT.Location = new System.Drawing.Point(16, 51);
             this.rdNTT.Name = "rdNTT";
-            this.rdNTT.Size = new System.Drawing.Size(265, 23);
+            this.rdNTT.Size = new System.Drawing.Size(194, 23);
             this.rdNTT.TabIndex = 1;
             this.rdNTT.TabStop = true;
-            this.rdNTT.Text = "Xem Nhân viên nghỉ làm trong ngày";
+            this.rdNTT.Text = "Xem Nhân viên nghỉ làm ";
             this.rdNTT.UseVisualStyleBackColor = true;
             this.rdNTT.CheckedChanged += new System.EventHandler(this.rdNTT_CheckedChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(71, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 31);
+            this.label1.Size = new System.Drawing.Size(141, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh Sách";
             // 
             // pnLoad
             // 
-            this.pnLoad.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnLoad.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnLoad.Location = new System.Drawing.Point(353, 20);
             this.pnLoad.Name = "pnLoad";
             this.pnLoad.Size = new System.Drawing.Size(610, 460);
@@ -166,6 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.pnLoad);
             this.Controls.Add(this.panel1);
             this.Name = "tkChamCong";

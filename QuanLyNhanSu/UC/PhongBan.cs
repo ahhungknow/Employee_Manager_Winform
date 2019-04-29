@@ -22,9 +22,10 @@ namespace QuanLyNhanSu.CT
             dt.Clear();
             dt = cl.HienPhongBan("0");
             dataGridView1.DataSource = dt;
+            btnThem.Enabled = true;
             btnLuu.Enabled = false;
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
             label5.Text = null;
             label6.Text = null;
             lbSoNV.Text = null;
@@ -37,6 +38,8 @@ namespace QuanLyNhanSu.CT
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
             maphong = dataGridView1.CurrentRow.Cells["MaPB"].Value.ToString();
             tenphong = dataGridView1.CurrentRow.Cells["TenPB"].Value.ToString();
             sonv = dataGridView1.CurrentRow.Cells["SonNV"].Value.ToString();
@@ -53,6 +56,8 @@ namespace QuanLyNhanSu.CT
                 {
                     dr = cl.XoaPhongBan(maphong);
                     Base.ShowCompleteMessage(3, txtTen.Text);
+                    txtMaPB.ResetText();
+                    txtTen.ResetText();
                 }
             }
             catch (Exception ee)
@@ -112,6 +117,8 @@ namespace QuanLyNhanSu.CT
             {
                 Base.ShowError("Không được bỏ trống mã phòng ban");
             }
+
+            
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -120,6 +127,7 @@ namespace QuanLyNhanSu.CT
             label6.Text = null;
             label7.Text = null;
             txtTen.Text = null;
+            btnThem.Enabled = false;
             btnLuu.Enabled = true;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;

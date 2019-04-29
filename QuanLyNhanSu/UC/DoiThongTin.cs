@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace QuanLyNhanSu.CT
 {
@@ -16,12 +17,13 @@ namespace QuanLyNhanSu.CT
         public static string ma = null;
         CauLenh cl = new CauLenh();
         SqlDataReader dr;
+
         public DoiThongTin()
         {
             InitializeComponent();
         }
         string mapb = null, macv = null, maluong = null, mahd = null, ten = null;
-        string gt = null, hinh = null;
+        string gt = null, hinh = "Hinh/TaoTaiKhoan.png";
 
         private void LbMaNV_Click(object sender, EventArgs e)
         {
@@ -30,6 +32,27 @@ namespace QuanLyNhanSu.CT
 
         private void PictureBox1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void PictureBox1_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog d = new OpenFileDialog();
+            d.Filter = "Image|*.jpg;*jpeg;*.png;*.gif;*.bmp";
+            d.Multiselect = false;
+
+            if (d.ShowDialog() == DialogResult.OK)
+            {
+                hinh = d.FileName;
+                if (File.Exists(hinh) == true)
+                {
+                    pictureBox1.ImageLocation = hinh;
+                }
+                else
+                {
+                    Base.ShowError("Không tồn tại!");
+                }
+            }
 
         }
 

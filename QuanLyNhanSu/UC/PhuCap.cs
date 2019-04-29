@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace QuanLyNhanSu.CT
 {
@@ -18,14 +12,16 @@ namespace QuanLyNhanSu.CT
         {
             InitializeComponent();
         }
-        CauLenh cl = new CauLenh();
-        SqlDataReader dr;
-        DataTable dt2 = new DataTable();
+
+        private CauLenh cl = new CauLenh();
+        private SqlDataReader dr;
+        private DataTable dt2 = new DataTable();
         public static string manv = null;
         public static string quyenhan = null;
-        string ma = null, loai = null;
-        string[] mang = null;
-        int d = 0;
+        private string ma = null, loai = null;
+        private string[] mang = null;
+        private int d = 0;
+
         private void PhanQuyen(string quyen)
         {
             if (quyen.Trim() == "User" || quyen.Trim() == "Admin")
@@ -37,10 +33,12 @@ namespace QuanLyNhanSu.CT
                 dataGridView1.Enabled = false;
             }
         }
+
         private void PhuCap_Load(object sender, EventArgs e)
         {
             load();
         }
+
         private void load()
         {
             dt2.Clear();
@@ -51,11 +49,12 @@ namespace QuanLyNhanSu.CT
             btLuu.Enabled = false;
             btXoa.Enabled = false;
             btSua.Enabled = false;
+            btThem.Enabled = true;
             PhanQuyen(quyenhan);
         }
+
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void rdTat_CheckedChanged(object sender, EventArgs e)
@@ -79,13 +78,20 @@ namespace QuanLyNhanSu.CT
         private void btThem_Click(object sender, EventArgs e)
         {
             btLuu.Enabled = true;
+            btThem.Enabled = false;
+            btSua.Enabled = false;
+            btXoa.Enabled = false;
             txtTen.Clear();
             txtTien.Clear();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            ThongKe.employeeName abcd = new ThongKe.employeeName(dataGridView1.CurrentRow.Cells["MaNhanVien"].Value.ToString());
+      
+            panel1.Controls.Clear();
+            panel1.Controls.Add(abcd);
+            manv = dataGridView1.CurrentRow.Cells["MaNhanVien"].Value.ToString();
             txtTen.Text = dataGridView1.CurrentRow.Cells["TenPC"].Value.ToString();
             loai = dataGridView1.CurrentRow.Cells["TenPC"].Value.ToString();
             txtTien.Text = dataGridView1.CurrentRow.Cells["Tien"].Value.ToString();
@@ -94,7 +100,10 @@ namespace QuanLyNhanSu.CT
             ma = dataGridView1.CurrentRow.Cells["MaNhanVien"].Value.ToString();
             btSua.Enabled = true;
             btXoa.Enabled = true;
+            btLuu.Enabled = false;
+            btThem.Enabled = true;
         }
+
         private void btLuu_Click(object sender, EventArgs e)
         {
             try
@@ -144,6 +153,8 @@ namespace QuanLyNhanSu.CT
                 {
                     dr = cl.XoaPhuCap(ma, loai);
                     MessageBox.Show("Xóa phụ cấp thành công!", "Phụ cấp", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    txtTen.ResetText();
+                    txtTien.ResetText();
                     load();
                 }
             }
