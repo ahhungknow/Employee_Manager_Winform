@@ -135,10 +135,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(343, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(283, 31);
+            this.label1.Size = new System.Drawing.Size(261, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "Bảo Hiểm Nhân Viên";
             // 
@@ -157,7 +157,9 @@
             this.cbLoai.FormattingEnabled = true;
             this.cbLoai.Items.AddRange(new object[] {
             "Bảo Hiểm Thân Thể",
-            "Bảo Hiểm Y Tế"});
+            "Bảo Hiểm Y Tế",
+            "Bảo Hiểm Xã Hội",
+            "Bảo Hiểm Thất Nghiệp"});
             this.cbLoai.Location = new System.Drawing.Point(431, 116);
             this.cbLoai.Name = "cbLoai";
             this.cbLoai.Size = new System.Drawing.Size(143, 27);

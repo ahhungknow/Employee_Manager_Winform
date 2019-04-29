@@ -135,10 +135,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(145, 26);
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(138, 11);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 18);
+            this.label6.Size = new System.Drawing.Size(154, 22);
             this.label6.TabIndex = 3;
             this.label6.Text = "ĐỔI MẬT KHẨU";
             // 

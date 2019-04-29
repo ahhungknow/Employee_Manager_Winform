@@ -1033,3 +1033,23 @@ as
 		select * from NhanVien
 	end
 
+
+go
+
+Create proc [dbo].[LayThuongPhatNhanVien]
+@mapb varchar(5),
+@ngaydau date,
+@ngaycuoi date
+as
+	if(@mapb = '0')
+	begin
+		select TenNV, Loai, Tien, LyDo
+		from NhanVien left join ThuongPhat on NhanVien.MaNhanVien = ThuongPhat.MaNhanVien
+		where (Ngay >= @ngaydau and Ngay <= @ngaycuoi)
+	end
+	else
+	begin
+		select TenNV, Loai, Tien, LyDo
+		from NhanVien left join ThuongPhat on NhanVien.MaNhanVien = ThuongPhat.MaNhanVien
+		where (@mapb = MaPB and (Ngay >= @ngaydau and Ngay <= @ngaycuoi))
+	end

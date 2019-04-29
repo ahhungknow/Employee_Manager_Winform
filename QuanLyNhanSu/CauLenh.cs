@@ -808,6 +808,22 @@ namespace QuanLyNhanSu
             da.Fill(dt);
             return dt;
         }
+
+        public DataTable LayThuongPhatNhanVien(string mapb, DateTime ngaydau, DateTime ngaycuoi)
+        {
+            if (con.State == ConnectionState.Open)
+                con.Close();
+            con.Open();
+            SqlCommand cm = new SqlCommand("LayThuongPhatNhanVien", con);
+            cm.CommandType = CommandType.StoredProcedure;
+            cm.Parameters.AddWithValue("@mapb", mapb);
+            cm.Parameters.AddWithValue("@ngaydau", ngaydau);
+            cm.Parameters.AddWithValue("@ngaycuoi", ngaycuoi);
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(dt);
+            return dt;
+        }
+
         public SqlDataReader XoaThuongPhat(string manv, string loai, int tien, string lydo)
         {
             if (con.State == ConnectionState.Open)

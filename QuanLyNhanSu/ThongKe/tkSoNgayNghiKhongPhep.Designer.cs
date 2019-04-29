@@ -113,11 +113,9 @@
             this.cbNam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNam.FormattingEnabled = true;
             this.cbNam.Items.AddRange(new object[] {
-            "2016",
-            "2017",
-            "2018",
             "2019",
-            "2020"});
+            "2020",
+            "2021"});
             this.cbNam.Location = new System.Drawing.Point(252, 88);
             this.cbNam.Name = "cbNam";
             this.cbNam.Size = new System.Drawing.Size(63, 27);
@@ -169,10 +167,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(128, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(359, 31);
+            this.label1.Size = new System.Drawing.Size(324, 31);
             this.label1.TabIndex = 23;
             this.label1.Text = "Số Ngày Nghỉ Không Phép";
             // 

@@ -34,6 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btThem = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TuNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DenNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpDen = new System.Windows.Forms.DateTimePicker();
             this.txtTien = new System.Windows.Forms.TextBox();
             this.rdTen = new System.Windows.Forms.RadioButton();
@@ -50,12 +56,6 @@
             this.btSua = new System.Windows.Forms.Button();
             this.btXoa = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TuNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DenNgay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,6 +115,53 @@
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // MaNhanVien
+            // 
+            this.MaNhanVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaNhanVien.DataPropertyName = "MaNhanVien";
+            this.MaNhanVien.HeaderText = "Mã Nhân Viên";
+            this.MaNhanVien.Name = "MaNhanVien";
+            this.MaNhanVien.ReadOnly = true;
+            // 
+            // TenNV
+            // 
+            this.TenNV.DataPropertyName = "TenNV";
+            this.TenNV.HeaderText = "Tên Nhân Viên";
+            this.TenNV.Name = "TenNV";
+            this.TenNV.ReadOnly = true;
+            this.TenNV.Width = 150;
+            // 
+            // TenPC
+            // 
+            this.TenPC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenPC.DataPropertyName = "LoaiPC";
+            this.TenPC.HeaderText = "Tên Phụ Cấp";
+            this.TenPC.Name = "TenPC";
+            this.TenPC.ReadOnly = true;
+            // 
+            // Tien
+            // 
+            this.Tien.DataPropertyName = "Tien";
+            this.Tien.HeaderText = "Tiền";
+            this.Tien.Name = "Tien";
+            this.Tien.ReadOnly = true;
+            // 
+            // TuNgay
+            // 
+            this.TuNgay.DataPropertyName = "TuNgay";
+            this.TuNgay.HeaderText = "Từ Ngày";
+            this.TuNgay.Name = "TuNgay";
+            this.TuNgay.ReadOnly = true;
+            this.TuNgay.Width = 150;
+            // 
+            // DenNgay
+            // 
+            this.DenNgay.DataPropertyName = "DenNgay";
+            this.DenNgay.HeaderText = "Đến Ngày";
+            this.DenNgay.Name = "DenNgay";
+            this.DenNgay.ReadOnly = true;
+            this.DenNgay.Width = 150;
+            // 
             // dtpDen
             // 
             this.dtpDen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,10 +208,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(463, 47);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(436, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 31);
+            this.label2.Size = new System.Drawing.Size(117, 31);
             this.label2.TabIndex = 4;
             this.label2.Text = "Phụ Cấp";
             this.label2.Click += new System.EventHandler(this.label1_Click);
@@ -281,53 +328,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(345, 30);
             this.panel1.TabIndex = 3;
-            // 
-            // MaNhanVien
-            // 
-            this.MaNhanVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaNhanVien.DataPropertyName = "MaNhanVien";
-            this.MaNhanVien.HeaderText = "Mã Nhân Viên";
-            this.MaNhanVien.Name = "MaNhanVien";
-            this.MaNhanVien.ReadOnly = true;
-            // 
-            // TenNV
-            // 
-            this.TenNV.DataPropertyName = "TenNV";
-            this.TenNV.HeaderText = "Tên Nhân Viên";
-            this.TenNV.Name = "TenNV";
-            this.TenNV.ReadOnly = true;
-            this.TenNV.Width = 150;
-            // 
-            // TenPC
-            // 
-            this.TenPC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenPC.DataPropertyName = "LoaiPC";
-            this.TenPC.HeaderText = "Tên Phụ Cấp";
-            this.TenPC.Name = "TenPC";
-            this.TenPC.ReadOnly = true;
-            // 
-            // Tien
-            // 
-            this.Tien.DataPropertyName = "Tien";
-            this.Tien.HeaderText = "Tiền";
-            this.Tien.Name = "Tien";
-            this.Tien.ReadOnly = true;
-            // 
-            // TuNgay
-            // 
-            this.TuNgay.DataPropertyName = "TuNgay";
-            this.TuNgay.HeaderText = "Từ Ngày";
-            this.TuNgay.Name = "TuNgay";
-            this.TuNgay.ReadOnly = true;
-            this.TuNgay.Width = 150;
-            // 
-            // DenNgay
-            // 
-            this.DenNgay.DataPropertyName = "DenNgay";
-            this.DenNgay.HeaderText = "Đến Ngày";
-            this.DenNgay.Name = "DenNgay";
-            this.DenNgay.ReadOnly = true;
-            this.DenNgay.Width = 150;
             // 
             // PhuCap
             // 

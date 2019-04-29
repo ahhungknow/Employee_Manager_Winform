@@ -63,6 +63,7 @@ namespace QuanLyNhanSu.CT
             btnXoa.Enabled = false;
             label9.Text = null;
             lbMaNV.Text = null;
+
             PhanQuyen(quyenhan);
         }
 
@@ -262,6 +263,18 @@ namespace QuanLyNhanSu.CT
                 dr = cl.XoaHopDong(hd);
                 Base.ShowCompleteMessage(3, txtTen.Text);
                 load();
+
+                txtTen.Text = null;
+                cbChuc.Text = null;
+                txtDiaChi.Text = null;
+                txtDT.Text = null;
+                txtEmail.Text = null;
+                txtHonNhan.Text = null;
+                txtLuong.Text = null;
+                cbPhong.Text = null;
+                txtSoCM.Text = null;
+                txtTD.Text = null;
+                pathHinh = "Hinh/TaoTaiKhoan.png";
             }
         }
 

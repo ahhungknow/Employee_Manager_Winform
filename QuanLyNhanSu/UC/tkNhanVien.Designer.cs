@@ -125,10 +125,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(240, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(417, 31);
+            this.label2.Size = new System.Drawing.Size(393, 31);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tìm Kiếm Thông Tin Nhân Viên";
             // 

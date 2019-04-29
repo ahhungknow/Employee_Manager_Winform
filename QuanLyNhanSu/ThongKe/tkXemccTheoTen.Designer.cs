@@ -124,11 +124,9 @@
             this.cbNam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNam.FormattingEnabled = true;
             this.cbNam.Items.AddRange(new object[] {
-            "2016",
-            "2017",
-            "2018",
             "2019",
-            "2020"});
+            "2020",
+            "2021"});
             this.cbNam.Location = new System.Drawing.Point(231, 70);
             this.cbNam.Name = "cbNam";
             this.cbNam.Size = new System.Drawing.Size(63, 27);
@@ -179,10 +177,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(131, 0);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(146, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(347, 31);
+            this.label1.Size = new System.Drawing.Size(316, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "Xem Theo Tên Nhân Viên";
             // 
@@ -209,9 +207,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-
             this.Controls.Add(this.cbTen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btXem);

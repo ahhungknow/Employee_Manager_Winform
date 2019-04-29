@@ -46,88 +46,88 @@
   <ItemGroup>
     <Compile Include="Base.cs" />
     <Compile Include="CauLenh.cs" />
-    <Compile Include="CT\BaoHiem.cs">
+    <Compile Include="UC\BaoHiem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\BaoHiem.Designer.cs">
+    <Compile Include="UC\BaoHiem.Designer.cs">
       <DependentUpon>BaoHiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\ChucVu.cs">
+    <Compile Include="UC\ChucVu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\ChucVu.Designer.cs">
+    <Compile Include="UC\ChucVu.Designer.cs">
       <DependentUpon>ChucVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\ctChamCong.cs">
+    <Compile Include="UC\ctChamCong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\ctChamCong.Designer.cs">
+    <Compile Include="UC\ctChamCong.Designer.cs">
       <DependentUpon>ctChamCong.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\DoiMatKhau.cs">
+    <Compile Include="UC\DoiMatKhau.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\DoiMatKhau.Designer.cs">
+    <Compile Include="UC\DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\DoiThongTin.cs">
+    <Compile Include="UC\DoiThongTin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\DoiThongTin.Designer.cs">
+    <Compile Include="UC\DoiThongTin.Designer.cs">
       <DependentUpon>DoiThongTin.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\NhanVien.cs">
+    <Compile Include="UC\NhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\NhanVien.Designer.cs">
+    <Compile Include="UC\NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\PhongBan.cs">
+    <Compile Include="UC\PhongBan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\PhongBan.Designer.cs">
+    <Compile Include="UC\PhongBan.Designer.cs">
       <DependentUpon>PhongBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\PhuCap.cs">
+    <Compile Include="UC\PhuCap.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\PhuCap.Designer.cs">
+    <Compile Include="UC\PhuCap.Designer.cs">
       <DependentUpon>PhuCap.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\SuaTK.cs">
+    <Compile Include="UC\SuaTK.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\SuaTK.Designer.cs">
+    <Compile Include="UC\SuaTK.Designer.cs">
       <DependentUpon>SuaTK.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\TaoTaiKhoan.cs">
+    <Compile Include="UC\TaoTaiKhoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\TaoTaiKhoan.Designer.cs">
+    <Compile Include="UC\TaoTaiKhoan.Designer.cs">
       <DependentUpon>TaoTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\ThuongPhat.cs">
+    <Compile Include="UC\ThuongPhat.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\ThuongPhat.Designer.cs">
+    <Compile Include="UC\ThuongPhat.Designer.cs">
       <DependentUpon>ThuongPhat.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\TinhLuong.cs">
+    <Compile Include="UC\TinhLuong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\TinhLuong.Designer.cs">
+    <Compile Include="UC\TinhLuong.Designer.cs">
       <DependentUpon>TinhLuong.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\tkLSLam.cs">
+    <Compile Include="UC\tkLSLam.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\tkLSLam.Designer.cs">
+    <Compile Include="UC\tkLSLam.Designer.cs">
       <DependentUpon>tkLSLam.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\tkNhanVien.cs">
+    <Compile Include="UC\tkNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\tkNhanVien.Designer.cs">
+    <Compile Include="UC\tkNhanVien.Designer.cs">
       <DependentUpon>tkNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="DangNhap.cs">
@@ -156,10 +156,10 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
-    <Compile Include="CT\tkChamCong.cs">
+    <Compile Include="UC\tkChamCong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CT\tkChamCong.Designer.cs">
+    <Compile Include="UC\tkChamCong.Designer.cs">
       <DependentUpon>tkChamCong.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongKe\employeeName.cs">
@@ -211,46 +211,46 @@
       <DependentUpon>tkXemccTheoTen.cs</DependentUpon>
     </Compile>
     <Compile Include="tkCauLenh.cs" />
-    <EmbeddedResource Include="CT\BaoHiem.resx">
+    <EmbeddedResource Include="UC\BaoHiem.resx">
       <DependentUpon>BaoHiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\ChucVu.resx">
+    <EmbeddedResource Include="UC\ChucVu.resx">
       <DependentUpon>ChucVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\ctChamCong.resx">
+    <EmbeddedResource Include="UC\ctChamCong.resx">
       <DependentUpon>ctChamCong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\DoiMatKhau.resx">
+    <EmbeddedResource Include="UC\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\DoiThongTin.resx">
+    <EmbeddedResource Include="UC\DoiThongTin.resx">
       <DependentUpon>DoiThongTin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\NhanVien.resx">
+    <EmbeddedResource Include="UC\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\PhongBan.resx">
+    <EmbeddedResource Include="UC\PhongBan.resx">
       <DependentUpon>PhongBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\PhuCap.resx">
+    <EmbeddedResource Include="UC\PhuCap.resx">
       <DependentUpon>PhuCap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\SuaTK.resx">
+    <EmbeddedResource Include="UC\SuaTK.resx">
       <DependentUpon>SuaTK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\TaoTaiKhoan.resx">
+    <EmbeddedResource Include="UC\TaoTaiKhoan.resx">
       <DependentUpon>TaoTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\ThuongPhat.resx">
+    <EmbeddedResource Include="UC\ThuongPhat.resx">
       <DependentUpon>ThuongPhat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\TinhLuong.resx">
+    <EmbeddedResource Include="UC\TinhLuong.resx">
       <DependentUpon>TinhLuong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\tkLSLam.resx">
+    <EmbeddedResource Include="UC\tkLSLam.resx">
       <DependentUpon>tkLSLam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\tkNhanVien.resx">
+    <EmbeddedResource Include="UC\tkNhanVien.resx">
       <DependentUpon>tkNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
@@ -274,7 +274,7 @@
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CT\tkChamCong.resx">
+    <EmbeddedResource Include="UC\tkChamCong.resx">
       <DependentUpon>tkChamCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKe\employeeName.resx">

@@ -169,10 +169,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(252, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(356, 31);
+            this.label1.Size = new System.Drawing.Size(327, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Lịch sử làm việc nhân viên";
             // 

@@ -122,7 +122,7 @@
             // 
             // cbQuyen
             // 
-            this.cbQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbQuyen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbQuyen.FormattingEnabled = true;
             this.cbQuyen.Items.AddRange(new object[] {
             "Super Admin",
@@ -130,7 +130,7 @@
             "User "});
             this.cbQuyen.Location = new System.Drawing.Point(102, 130);
             this.cbQuyen.Name = "cbQuyen";
-            this.cbQuyen.Size = new System.Drawing.Size(191, 28);
+            this.cbQuyen.Size = new System.Drawing.Size(191, 27);
             this.cbQuyen.TabIndex = 4;
             // 
             // label4
@@ -198,16 +198,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(250, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(425, 31);
+            this.label2.Size = new System.Drawing.Size(420, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "THÊM TÀI KHOẢN NHÂN VIÊN";
             // 
             // txtTK
             // 
-            this.txtTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTK.Location = new System.Drawing.Point(102, 64);
             this.txtTK.Name = "txtTK";
             this.txtTK.Size = new System.Drawing.Size(191, 26);
@@ -216,7 +216,7 @@
             // 
             // txtMK
             // 
-            this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMK.Location = new System.Drawing.Point(102, 97);
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(191, 26);
