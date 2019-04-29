@@ -42,7 +42,7 @@
             // btnThoat
             // 
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.Teal;
             this.btnThoat.Location = new System.Drawing.Point(168, 189);
             this.btnThoat.Name = "btnThoat";
@@ -54,8 +54,8 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Teal;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.Green;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Snow;
             this.label1.Location = new System.Drawing.Point(-3, 0);
             this.label1.Name = "label1";
@@ -77,7 +77,7 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.Teal;
+            this.label2.BackColor = System.Drawing.Color.Green;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Snow;
             this.label2.Location = new System.Drawing.Point(-6, 251);
@@ -111,7 +111,7 @@
             // 
             // btnKetNoi
             // 
-            this.btnKetNoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKetNoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKetNoi.ForeColor = System.Drawing.Color.Teal;
             this.btnKetNoi.Location = new System.Drawing.Point(288, 189);
             this.btnKetNoi.Name = "btnKetNoi";
@@ -123,7 +123,7 @@
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.Teal;
             this.btnDangNhap.Location = new System.Drawing.Point(34, 189);
             this.btnDangNhap.Name = "btnDangNhap";

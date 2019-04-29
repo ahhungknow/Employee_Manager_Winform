@@ -43,7 +43,7 @@ namespace QuanLyNhanSu
             txtSN.Text = kq[0].Trim();
             txtD.Text = kq[1].Trim();
             rd.Close();
-            if (txtD.Text == "ZeZoBi94@gmail.com")
+            if (txtD.Text == "quangnv@dft.vn")
             {
                 label3.Text = "Nhập server name lúc connect vô sql của máy bạn!!";
                 txtD.Text = "QlNhanSu";
@@ -61,7 +61,6 @@ namespace QuanLyNhanSu
                 string[] dl = new string[] {a,b};
                 using (StreamWriter sw = new StreamWriter(@"KetNoi\ketnoi.ini"))
                 {
-
                     foreach (string s in dl)
                     {
                         sw.WriteLine(s);

@@ -76,6 +76,12 @@
     <Compile Include="UC\DoiThongTin.Designer.cs">
       <DependentUpon>DoiThongTin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\Info.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\NhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\DoiThongTin.resx">
       <DependentUpon>DoiThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>

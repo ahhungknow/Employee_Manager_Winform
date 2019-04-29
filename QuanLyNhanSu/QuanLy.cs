@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyNhanSu.UC;
+using System;
 using System.Windows.Forms;
 
 namespace QuanLyNhanSu
@@ -56,6 +57,9 @@ namespace QuanLyNhanSu
         private void QuanLy_Load(object sender, EventArgs e)
         {
             load();
+            CT.TinhLuong tl = new CT.TinhLuong();
+            pnLoad.Controls.Clear();
+            pnLoad.Controls.Add(tl);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -192,6 +196,13 @@ namespace QuanLyNhanSu
             CT.PhuCap pc = new CT.PhuCap();
             pnLoad.Controls.Clear();
             pnLoad.Controls.Add(pc);
+        }
+
+        private void Button21_Click(object sender, EventArgs e)
+        {
+            Info info = new Info();
+            pnLoad.Controls.Clear();
+            pnLoad.Controls.Add(info);
         }
     }
 }
