@@ -146,7 +146,7 @@
             this.tabPage5.Controls.Add(this.button21);
             this.tabPage5.Location = new System.Drawing.Point(4, 28);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(981, 100);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Trợ Giúp";
@@ -213,7 +213,7 @@
             this.tabPage4.Controls.Add(this.brnChamCong);
             this.tabPage4.Location = new System.Drawing.Point(4, 28);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(981, 100);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Chức năng thêm";
@@ -237,6 +237,7 @@
             this.button7.Size = new System.Drawing.Size(70, 70);
             this.button7.TabIndex = 9;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // label21
             // 
@@ -318,7 +319,7 @@
             this.tpQuanLy.Controls.Add(this.btnPhongBan);
             this.tpQuanLy.Location = new System.Drawing.Point(4, 28);
             this.tpQuanLy.Name = "tpQuanLy";
-            this.tpQuanLy.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpQuanLy.Padding = new System.Windows.Forms.Padding(3);
             this.tpQuanLy.Size = new System.Drawing.Size(981, 100);
             this.tpQuanLy.TabIndex = 1;
             this.tpQuanLy.Text = "Quản Lý";
@@ -501,7 +502,7 @@
             this.tabPage1.Controls.Add(this.button12);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(981, 100);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Hệ Thống";
@@ -625,7 +626,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 609);
+            this.ClientSize = new System.Drawing.Size(984, 636);
             this.Controls.Add(this.pnLoad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

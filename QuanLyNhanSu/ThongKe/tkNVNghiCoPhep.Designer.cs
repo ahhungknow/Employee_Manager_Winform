@@ -45,6 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@
             this.txtNgay.Name = "txtNgay";
             this.txtNgay.Size = new System.Drawing.Size(39, 26);
             this.txtNgay.TabIndex = 17;
+            this.txtNgay.TextChanged += new System.EventHandler(this.TxtNgay_TextChanged);
             // 
             // cbNam
             // 
@@ -223,11 +225,23 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Xem Nhân Viên Nghỉ Có Phép";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(449, 93);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 39);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Xuất báo cáo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // tkNVNghiCoPhep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtNgay);
             this.Controls.Add(this.cbNam);
             this.Controls.Add(this.cbThang);
@@ -262,5 +276,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn ntn;
+        private System.Windows.Forms.Button button1;
     }
 }

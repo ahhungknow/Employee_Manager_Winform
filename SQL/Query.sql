@@ -1053,3 +1053,35 @@ as
 		from NhanVien left join ThuongPhat on NhanVien.MaNhanVien = ThuongPhat.MaNhanVien
 		where (@mapb = MaPB and (Ngay >= @ngaydau and Ngay <= @ngaycuoi))
 	end
+
+
+go
+
+Create proc [dbo].[TongTienThuong]
+@ngaydau date,
+@ngaycuoi date
+as
+	begin
+		select sum(Tien) from ThuongPhat where Loai=N'Thưởng' and Ngay>=@ngaydau and Ngay<=@ngaycuoi
+	end
+
+go
+
+Create proc [dbo].[TongTienPhat]
+@ngaydau date,
+@ngaycuoi date
+as
+	begin
+		select sum(Tien) from ThuongPhat where Loai=N'Phạt' and Ngay>=@ngaydau and Ngay<=@ngaycuoi
+	end
+
+go
+
+Create proc [dbo].[TongTienPhuCap]
+@ngaydau date,
+@ngaycuoi date
+as
+	begin
+		select sum(Tien) from PhuCap where TuNgay>=@ngaydau and DenNgay<=@ngaycuoi
+	end
+
