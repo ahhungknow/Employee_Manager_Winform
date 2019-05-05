@@ -22,7 +22,7 @@ namespace QuanLyNhanSu
         private void timer1_Tick(object sender, EventArgs e)
         {
             dem++;
-            if (dem == 2)
+            if (dem == 5)
             {
                 timer1.Stop();
                 this.Hide();

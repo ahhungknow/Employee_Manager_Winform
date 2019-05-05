@@ -209,9 +209,9 @@ namespace QuanLyNhanSu.CT
             int nl = Convert.ToInt32(songaylam);
             int p = tienPhuCap(manv,ngaycuoi);
             if (ncp > 3)
-                nl = nl - nkp - (ncp % 3);
+                nl = nl + 3 - (ncp % 3);
             else
-                nl = nl - nkp + ncp;
+                nl = nl + ncp;
             tongluong = ((luongCoBan / 22) * nl) + a + p;
             //MessageBox.Show(ncp.ToString() + "\n" + nl.ToString() + "\n" + a.ToString() + "\n" + tongluong.ToString());
             return tongluong;
