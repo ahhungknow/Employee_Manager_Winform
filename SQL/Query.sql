@@ -657,7 +657,7 @@ as
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 go
 
-Create proc [dbo].[LayNhanVienTuMaPB]--'0','12-1-2016', '12-30-2016'
+Create proc [dbo].[LayNhanVienTuMaPB]
 @mapb varchar(5),
 @ngaydau date,
 @ngaycuoi date
@@ -1062,7 +1062,7 @@ Create proc [dbo].[TongTienThuong]
 @ngaycuoi date
 as
 	begin
-		select sum(Tien) from ThuongPhat where Loai=N'Thưởng' and Ngay>=@ngaydau and Ngay<=@ngaycuoi
+		select sum(Tien) as Tien from ThuongPhat where Loai=N'Thưởng' and Ngay>=@ngaydau and Ngay<=@ngaycuoi
 	end
 
 go
@@ -1072,7 +1072,7 @@ Create proc [dbo].[TongTienPhat]
 @ngaycuoi date
 as
 	begin
-		select sum(Tien) from ThuongPhat where Loai=N'Phạt' and Ngay>=@ngaydau and Ngay<=@ngaycuoi
+		select sum(Tien) as Tien from ThuongPhat where Loai=N'Phạt' and Ngay>=@ngaydau and Ngay<=@ngaycuoi
 	end
 
 go
@@ -1082,6 +1082,8 @@ Create proc [dbo].[TongTienPhuCap]
 @ngaycuoi date
 as
 	begin
-		select sum(Tien) from PhuCap where TuNgay>=@ngaydau and DenNgay<=@ngaycuoi
+		select sum(Tien) as Tien from PhuCap where  @ngaycuoi<=DenNgay
 	end
+
+
 
