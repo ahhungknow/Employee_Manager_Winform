@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace QuanLyNhanSu.CT
@@ -36,22 +35,23 @@ namespace QuanLyNhanSu.CT
                 }
             }
 
-            if(ngay<10)
-                b = "0/"+ ngay + "/" + thang + "/" + nam + " 12:00:00 SA";
-            else if(thang<10)
-                b = ngay + "/0" + thang + "/" + nam + " 12:00:00 SA";
-            else
-                b = ngay + "/" + thang + "/" + nam + " 12:00:00 SA";
+            if (ngay < 10)
+                b = "0" + ngay;
+            if (thang < 10)
+                b = b + "/0" + thang;
+
+            b = b +"/"+ nam + " 12:00:00 SA";
 
             if (a == b)
             {
+                label6.Text = "Đã chấm công ngày hôm nay!";
                 dt.Clear();
                 dataGridView1.Refresh();
                 dt = cl.LayChamCong1("0", DateTime.Now);
                 dataGridView1.DataSource = dt;
                 for (int i = 0; i < dataGridView1.RowCount; i++)
                 {
-                    if(dt.Rows[i]["TinhTrang"].ToString()=="Đi Làm")
+                    if (dt.Rows[i]["TinhTrang"].ToString() == "Đi Làm")
                         dataGridView1.Rows[i].Cells["TinhTrang"].Value = "Đi Làm";
                     if (dt.Rows[i]["TinhTrang"].ToString() == "Nghỉ Có Phép")
                         dataGridView1.Rows[i].Cells["TinhTrang"].Value = "Nghỉ Có Phép";
@@ -98,7 +98,7 @@ namespace QuanLyNhanSu.CT
                     dr = cl.ThemChamCong(manv, DateTime.Now, tinhtrang);
                 }
                 load();
-                MessageBox.Show("Đã chấm công ngày hôm nay!", "Chấm công",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                MessageBox.Show("Đã chấm công ngày hôm nay!", "Chấm công", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 

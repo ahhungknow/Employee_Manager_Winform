@@ -52,6 +52,7 @@ namespace QuanLyNhanSu.CT
             dt.Clear();
             dt = cl.TongLuongNV("0");
             dataGridView1.DataSource = dt;
+            int sendLuong1 = 0;
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
                 manv = dataGridView1.Rows[i].Cells["Ma"].Value.ToString();
@@ -60,11 +61,12 @@ namespace QuanLyNhanSu.CT
                 dataGridView1.Rows[i].Cells["P"].Value = TienPhat(manv, ngaydau, ngaycuoi);
                 dataGridView1.Rows[i].Cells["PC"].Value = tienPhuCap(manv, ngaycuoi);
                 tongluong = TinhLuong1(manv, songaylam, tienthuong.ToString(), tienphat.ToString(), ngaydau, ngaycuoi);
-                sendLuong += tongluong;
+                sendLuong1 += tongluong;
                 dataGridView1.Rows[i].Cells["TL"].Value = String.Format("{0:0,0}", tongluong);
                 //MessageBox.Show(songaylam + "\n" + tienthuong + "\n" + tienphat + "\n" + tongluong.ToString());
 
             }
+            sendLuong = sendLuong1;
          
         }
         private string LaySoNgayLam(string manv, DateTime ngaydau, DateTime ngaycuoi)

@@ -16,11 +16,13 @@ namespace QuanLyNhanSu.ThongKe
         {
             InitializeComponent();
         }
-        private string pathExcel="";
+
+        private string pathExcel = "";
 
         private int tongchi = 0;
         private DateTime tungay = Convert.ToDateTime("01/" + DateTime.Now.Month + "/" + DateTime.Now.Year);
         private DateTime denngay = Convert.ToDateTime("30/" + DateTime.Now.Month + "/" + DateTime.Now.Year);
+
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -34,6 +36,7 @@ namespace QuanLyNhanSu.ThongKe
         private void load()
         {
             tongchi = TinhLuong.sendLuong;
+
             txtTong.Text = tongchi.ToString();
             CauLenh cl1 = new CauLenh();
             txtThuong.Text = cl1.TongTienThuong(tungay, denngay).Rows[0]["Tien"].ToString();
@@ -41,7 +44,30 @@ namespace QuanLyNhanSu.ThongKe
             txtPhat.Text = cl2.TongTienPhat(tungay, denngay).Rows[0]["Tien"].ToString();
             CauLenh cl3 = new CauLenh();
             txtPhuCap.Text = cl3.TongTienPhuCap(tungay, denngay).Rows[0]["Tien"].ToString();
-
+            try
+            {
+                Convert.ToInt32(txtThuong.Text);
+            }
+            catch
+            {
+                txtThuong.Text = "0";
+            }
+            try
+            {
+                Convert.ToInt32(txtPhat.Text);
+            }
+            catch
+            {
+                txtPhat.Text = "0";
+            }
+            try
+            {
+                Convert.ToInt32(txtPhuCap.Text);
+            }
+            catch
+            {
+                txtPhuCap.Text = "0";
+            }
             int luong = Convert.ToInt32(txtTong.Text) - Convert.ToInt32(txtThuong.Text) + Convert.ToInt32(txtPhat.Text) - Convert.ToInt32(txtPhuCap.Text);
             txtLuong.Text = luong.ToString();
         }
@@ -91,7 +117,7 @@ namespace QuanLyNhanSu.ThongKe
                 TienThuong = Convert.ToInt32(txtThuong.Text),
                 TienPhuCap = Convert.ToInt32(txtPhuCap.Text),
                 TienPhat = Convert.ToInt32(txtPhat.Text),
-                TongChi=tongchi,
+                TongChi = tongchi,
             });
             {
                 string filePath = "";
